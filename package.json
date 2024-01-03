@@ -12,9 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@microsoft/office-js": "^1.1.90",
     "@pspdfkit/nodejs": "^0.0.4",
-    "canvas": "^2.11.2",
     "convertapi": "^1.13.0",
     "convertapi-node": "^1.0.2",
     "cors": "^2.8.5",
@@ -25,14 +23,9 @@
     "image-size": "^1.1.1",
     "multer": "^1.4.5-lts.1",
     "node-convert": "^0.1.1",
-    "office-to-pdf": "^4.0.0",
-    "officegen": "^0.6.5",
     "pdf-creator-node": "^2.3.5",
     "pdf-lib": "^1.17.1",
     "pdf-parse": "^1.1.1",
-    "pdf-poppler": "^0.2.1",
-    "pdfkit": "^0.14.0",
-    "puppeteer": "^21.6.1",
-    "sharp": "^0.33.1"
+    "pdfkit": "^0.14.0"
   }
 }
