@@ -1,0 +1,28 @@
+.tools_item{
+    width: 250px;
+    height: 250px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(192, 189, 189, 0.9);
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.tools_item:hover{
+    background-color: rgba(192, 189, 189, 0.112);
+}
+
+.tools_item:hover .tools_item_icon>svg{
+    transform: scale(1.1);
+}
+
+.tools_item > a > h3{
+    padding: 20px 0 0 0;
+    color: crimson;
+    text-transform: uppercase;
+}
+
+.tools_item_content > p{
+    padding: 10px 0;
+    font-size: 12px;
+    color: rgb(228, 22, 63, 0.7);
+}

@@ -1,0 +1,158 @@
+.header{
+    display: flex;
+    align-items: center;
+    height: 10vh;
+    box-shadow: 0 0 10px grey;
+    font-weight: 500;
+}
+
+.header > a{
+    margin-left: 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header > a > img{
+    width: 100px;
+    height: 100px;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    margin: 0 40px;
+    height: 100%;
+    width: 80%;
+}
+
+.menu > ul{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    text-transform: uppercase;
+}
+
+.menu > ul > li{
+    display: flex;
+    align-items: center;
+    margin: 0 30px;
+    font-size: 14px;
+}
+
+.menu > ul > li > a{
+    color: black;
+}
+
+.menu > ul > li > a:hover{
+    color: crimson;
+}
+
+.has-dropdown{
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.link_title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+
+.link_title > svg{
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.link_title:hover{
+    color: crimson;
+}
+
+.dropdown{
+    position: absolute;
+    top: 60px;
+    display: flex;
+    width: 40vw;
+    box-shadow: 0 0 20px rgb(220, 203, 203);
+    background-color: white;
+    border-radius: 20px;
+    z-index: 100;
+}
+
+.shape{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    top: 55px;
+    transform: rotate(45deg);
+    z-index: 101;
+}
+
+.nav_title{
+    margin: 10px 0;
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: gray;
+}
+
+.dropdown > ul{
+    width: 100%;
+    padding: 10px;
+    margin-left: 20px;
+}
+
+.dropdown > ul > li{
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.dropdown > ul > li > a{
+    display: flex;
+    align-items: center;
+    padding: 0;
+    width: 100%;
+}
+
+.dropdown > ul > li > a > svg{
+    width: 20px;
+    margin-right: 14px;
+    margin-left: 10px;
+}
+
+.user_account{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.user_account > img{
+    margin-right: 20px;
+    border: 1px solid grey;
+    border-radius: 100%;
+    cursor: pointer;
+    width: 40px;
+}
+
+.user_account > svg{
+    font-size: 40px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.dropdown > ul > li > a{
+    color: black;
+}
+
+.dropdown > ul > li > a:hover{
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
