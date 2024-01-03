@@ -5,8 +5,6 @@ import dotenv from 'dotenv'
 import PDFDocument from 'pdfkit'
 import fs from 'fs'
 import size from 'image-size'
-import { convert } from 'pdf-poppler'
-import sharp from 'sharp'
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -123,51 +121,5 @@ router.post("/download", (req, res) =>{
         return res.status(500).json({ success: false, message: error.message });
     }
 })
-
-async function convertPdfToJpg(pdfPath, outputDir) {
-    try {
-        const options = {
-            format: 'jpeg',
-            out_dir: outputDir,
-            out_prefix: 'page',
-            page: null,
-        };
-
-        // Convert PDF to images
-        const result = await convert(pdfPath, options);
-
-        // Resize images if needed (optional)
-        const resizeOptions = {
-            width: 800, // Set the desired width
-            height: 600, // Set the desired height
-            fit: 'inside', // Resize strategy
-        };
-
-        for (const pageImage of result) {
-            const imagePath = `${outputDir}/${pageImage}`;
-            await sharp(imagePath).resize(resizeOptions).toFile(imagePath);
-        }
-
-        console.log(`PDF converted to JPEG images in ${outputDir}`);
-        return true;
-    } catch (error) {
-        console.error(error.message);
-        throw error;
-    }
-}
-
-// Example usage in a router
-router.get("/pdf_to_jpg", async (req, res) => {
-    const pdfPath = "./server/public/images/input.pdf";
-    const outputDir = "./server/public/images";
-
-    try {
-        await convertPdfToJpg(pdfPath, outputDir);
-        return res.status(200).json({ success: true, message: "PDF converted to JPEG images successfully" });
-    } catch (error) {
-        console.error(error.message);
-        return res.status(500).json({ success: false, message: error.message });
-    }
-});
 
 export default router
